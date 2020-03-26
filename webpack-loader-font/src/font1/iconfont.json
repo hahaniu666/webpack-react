@@ -1,0 +1,37 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "13412640",
+      "name": "案件串并",
+      "font_class": "anjianchuanbing",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "13412641",
+      "name": "案件列表",
+      "font_class": "anjianliebiao",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "13673275",
+      "name": "医生",
+      "font_class": "yisheng",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "13673276",
+      "name": "X光片",
+      "font_class": "Xguangpian",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    }
+  ]
+}

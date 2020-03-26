@@ -26,7 +26,29 @@ module.exports = {
 				'sass-loader',
 				'postcss-loader'
 			]
-		}]
+		},
+		{
+			test: /\.(eot|ttf|svg)$/,
+			use: {
+				loader: 'file-loader'
+			} 
+		}
+		// {
+		// 	test: /\.(css|scss)$/,
+		// 	use: [
+		// 		'style-loader', 
+		// 		{
+		// 			loader: 'css-loader',
+		// 			options: {
+		// 				importLoaders: 2,
+		// 				modules: true,
+		// 			}
+		// 		},
+		// 		'sass-loader',
+		// 		'postcss-loader'
+		// 	]
+		// }
+	]
 	},
 	output: {
 		filename: 'main.js',
