@@ -1,0 +1,10 @@
+@import './cursor.scss';
+
+body {
+    background: red;
+
+    img {
+        border-radius: 30px;
+        transform: translate(100px, 100px);
+    }
+}
