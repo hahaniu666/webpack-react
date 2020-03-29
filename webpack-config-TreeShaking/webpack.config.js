@@ -6,11 +6,12 @@ const webpack = require('webpack');
 
 module.exports = {
 	mode: 'development',
+	// mode: 'production',
 	entry: {
 		main: './src/index.js',
-		// sub: './src/index.js'
 	},
 	devtool: 'cheap-module-eval-source-map',
+	// devtool: 'cheap-module-source-map',
 	devServer: {
 		// 服务器根路径
 		contentBase: './dist',
@@ -28,37 +29,6 @@ module.exports = {
 				test: /\.js$/,
 				exclude: /node_modules/,
 				loader: "babel-loader",
-				// 可以放在根目录.babelrc文件里
-				// options: {
-				//	// 业务代码
-				// 	"presets": [
-				// 		[
-				// 			"@babel/preset-env",
-				// 			{
-				// 				"targets": {
-				// 					"edge": "17",
-				// 					"firefox": "60",
-				// 					"chrome": "67",
-				// 					"safari": "11.1",
-				// 				},
-				// 				useBuiltIns: 'usage'
-				// 			}
-				// 		]
-				// 	]
-				//  // 库代码
-				// 	// "plugins": [
-				// 	// 	[
-				// 	// 		"@babel/plugin-transform-runtime",
-				// 	// 		{
-				// 	// 			"absoluteRuntime": false,
-				// 	// 			"corejs": 2,
-				// 	// 			"helpers": true,
-				// 	// 			"regenerator": true,
-				// 	// 			"useESModules": false,
-				// 	// 		}
-				// 	// 	]
-				// 	// ]
-				// }
 			},
 			{
 				test: /\.(jpg|png|gif)$/,
@@ -72,15 +42,6 @@ module.exports = {
 					}
 				}
 			},
-			// {
-			// 	test: /\.(css|scss)$/,
-			// 	use: [
-			// 		'style-loader',
-			// 		'css-loader',
-			// 		'sass-loader',
-			// 		'postcss-loader'
-			// 	]
-			// },
 			{
 				test: /\.scss$/,
 				use: [
@@ -98,21 +59,6 @@ module.exports = {
 					'postcss-loader'
 				]
 			},
-			// {
-			// 	test: /\.(css|scss)$/,
-			// 	use: [
-			// 		'style-loader', 
-			// 		{
-			// 			loader: 'css-loader',
-			// 			options: {
-			// 				importLoaders: 2,
-			// 				// modules: true,
-			// 			}
-			// 		},
-			// 		'sass-loader',
-			// 		'postcss-loader'
-			// 	]
-			// },
 			{
 				test: /\.(eot|ttf|svg|woff)$/,
 				use: {
@@ -132,14 +78,11 @@ module.exports = {
 		}),
 		new webpack.HotModuleReplacementPlugin()
 	],
-	// output: {
-	// 	filename: '[name].js',
-	// 	path: path.resolve(__dirname, 'dist'),
-	// 	// publicPath: 'https:www.cdn.com'
-	// }
+	optimization: {
+		usedExports: true,
+	},
 	output: {
 		filename: '[name].js',
 		path: path.resolve(__dirname, 'dist'),
-		publicPath: '/'
 	}
 }

@@ -16,11 +16,11 @@ module.exports = {
 		contentBase: './dist',
 		open: true,
 		port: 8888,
-		hot: true,
-		hotOnly: true,
-		proxy:{
-			'/api': 'http://localhost:3000/',
-		}
+		// hot: true,
+		// hotOnly: true,
+		// proxy:{
+		// 	'/api': 'http://localhost:3000/',
+		// }
 	},
 	module: {
 		rules: [{
@@ -76,7 +76,7 @@ module.exports = {
 			dry: false,
 			verbose: true,
 		}),
-		new webpack.HotModuleReplacementPlugin()
+		// new webpack.HotModuleReplacementPlugin()
 	],
 	// output: {
 	// 	filename: '[name].js',
